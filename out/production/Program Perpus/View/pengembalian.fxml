@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.xPengembalian">
+    <children>
+        <SplitPane dividerPositions="0.1" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5C8ECE;">
+                    <children>
+                        <JFXButton fx:id="back" layoutX="14.0" layoutY="16.0" onAction="#back" styleClass="bodyback" stylesheets="@../perpus/bgGambar.css" text=" " />
+                        <Text fill="WHITE" layoutX="41.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengembalian Buku" textAlignment="CENTER">
+                            <font>
+                                <Font name="Bebas Neue Bold" size="24.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <JFXTreeTableView fx:id="tableDaftarbuku" layoutX="40.0" layoutY="115.0" prefHeight="353.0" prefWidth="248.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </JFXTreeTableView>
+                  <JFXRadioButton fx:id="rb1" layoutX="352.0" layoutY="324.0" onAction="#rusak" text="Rusak" />
+                  <JFXRadioButton fx:id="rb2" layoutX="353.0" layoutY="348.0" onAction="#hilang" text="Hilang" />
+                  <JFXTreeTableView fx:id="tableDenda" layoutX="494.0" layoutY="115.0" prefHeight="306.0" prefWidth="248.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </JFXTreeTableView>
+                  <Text layoutX="558.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Denda Anggota" />
+                  <Text layoutX="93.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Buku Yang Dipinjam" />
+                  <JFXTextField fx:id="text_idanggota" focusColor="#5c8ece" labelFloat="true" layoutX="332.0" layoutY="115.0" opacity="0.5" promptText="Masukan ID Anggota" />
+                  <Text layoutX="329.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Batas Waktu  Peminjaman " />
+                  <Text layoutX="329.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lewat" />
+                  <Text fx:id="lable_denda" layoutX="372.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text layoutX="413.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hari" />
+                  <Text layoutX="349.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kondisi Buku" />
+                  <Text layoutX="494.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Denda" />
+                  <Text fx:id="lable_denda" layoutX="607.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <JFXButton fx:id="buttonProses" buttonType="RAISED" layoutX="368.0" layoutY="156.0" onAction="#prosesPengembalian" style="-fx-background-color: #5c8ece;" text="Proses" textFill="WHITE" />
+               </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

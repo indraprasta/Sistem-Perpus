@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.xKunjungan">
+   <children>
+      <SplitPane dividerPositions="0.1" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #5C8ECE;">
+               <children>
+                  <JFXButton fx:id="back" layoutX="14.0" layoutY="16.0" onAction="#back" styleClass="bodyback" stylesheets="@../perpus/bgGambar.css" text=" " />
+                  <Text fill="WHITE" layoutX="41.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kunjungan" textAlignment="CENTER">
+                     <font>
+                        <Font name="Bebas Neue Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <JFXTextField fx:id="text_idanggota" focusColor="#5c8ece" labelFloat="true" layoutX="332.0" layoutY="204.0" opacity="0.5" promptText="Masukan ID Anggota" unFocusColor="#b5b5b5" />
+                  <JFXButton fx:id="buttonProsesKunjungan" buttonType="RAISED" layoutX="374.0" layoutY="243.0" onAction="#prosesKunjunagn" style="-fx-background-color: #5C8ECE;" text="Proses" textFill="WHITE" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
